@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api";
+const API = https:"//railway.com/project/985c42ba-499c-4736-92c3-b01db69e844a/service/c59268d4-5232-48de-b8c9-72d084cab187?environmentId=2b574a5e-96f3-4f9b-8028-3f7e7a1fd68f&id=f22bc9dc-b294-4cc5-a192-26829b5b06e3#deploy";
 
 async function loadDashboard() {
   const status = document.getElementById("apiStatus");
