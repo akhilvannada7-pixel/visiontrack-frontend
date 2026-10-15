@@ -1,4 +1,4 @@
-const API = https:"visiontrack-backend-production.up.railway.app";
+const API = "https:visiontrack-backend-production.up.railway.app";
 
 async function loadDashboard() {
   const status = document.getElementById("apiStatus");
