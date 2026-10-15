@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,43 +9,104 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="logo">⌗</span><div>VisionTrack<small>INTELLIGENT VISION SYSTEM</small></div></div>
-    <span class="pill" id="apiStatus">Connecting to API…</span>
+    <div class="brand">
+      <span class="logo">⌗</span>
+      <div>VisionTrack
+        <small>INTELLIGENT VISION SYSTEM</small>
+      </div>
+    </div>
+    <span class="pill" id="apiStatus">Checking API...</span>
   </header>
+
   <main class="container">
     <section class="intro">
-      <div><p class="eyebrow">COMPUTER VISION / OVERVIEW</p><h1>Object Tracking Dashboard</h1>
-      <p>Monitor tracking sessions and detected-object records.</p></div>
+      <div>
+        <p class="eyebrow">COMPUTER VISION / OVERVIEW</p>
+        <h1>Object Tracking Dashboard</h1>
+        <p>Monitor tracking sessions and detected-object records.</p>
+      </div>
       <button class="primary" id="refreshBtn">Refresh data</button>
     </section>
+
     <section class="stats">
-      <article class="card"><span>Tracked objects</span><strong id="objectCount">—</strong></article>
-      <article class="card"><span>Saved sessions</span><strong id="sessionCount">—</strong></article>
-      <article class="card"><span>Detection events</span><strong id="eventCount">—</strong></article>
+      <article class="card">
+        <span>Tracked objects</span>
+        <strong id="objectCount">—</strong>
+      </article>
+      <article class="card">
+        <span>Saved sessions</span>
+        <strong id="sessionCount">—</strong>
+      </article>
+      <article class="card">
+        <span>Detection events</span>
+        <strong id="eventCount">—</strong>
+      </article>
     </section>
+
     <section class="grid">
       <article class="panel">
         <h2>Create demo tracking record</h2>
-        <p class="muted">This form sends a record to the backend and stores it in MySQL.</p>
+        <p class="muted">Save a demo record through the backend API.</p>
+
         <form id="trackForm">
-          <label>Object class<select id="objectClass"><option>Person</option><option>Vehicle</option><option>Bicycle</option><option>Other</option></select></label>
-          <label>Confidence (%)<input id="confidence" type="number" min="0" max="100" step="0.1" value="96.5" required></label>
+          <label>Object class
+            <select id="objectClass">
+              <option>Person</option>
+              <option>Vehicle</option>
+              <option>Bicycle</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>Confidence (%)
+            <input id="confidence" type="number" min="0"
+              max="100" step="0.1" value="96.5" required>
+          </label>
+
           <div class="two">
-            <label>X position (%)<input id="posX" type="number" min="0" max="100" value="35" required></label>
-            <label>Y position (%)<input id="posY" type="number" min="0" max="100" value="48" required></label>
+            <label>X position (%)
+              <input id="posX" type="number" min="0"
+                max="100" value="35" required>
+            </label>
+            <label>Y position (%)
+              <input id="posY" type="number" min="0"
+                max="100" value="48" required>
+            </label>
           </div>
+
           <button class="primary" type="submit">Save tracking record</button>
           <p id="formMessage" class="message" role="status"></p>
         </form>
       </article>
+
       <article class="panel">
         <h2>Recent tracked objects</h2>
         <p class="muted">Records returned by the Express API.</p>
-        <div class="tablewrap"><table><thead><tr><th>ID</th><th>Class</th><th>Confidence</th><th>Position</th></tr></thead><tbody id="objectRows"><tr><td colspan="4">Loading…</td></tr></tbody></table></div>
+        <div class="tablewrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Class</th>
+                <th>Confidence</th>
+                <th>Position</th>
+              </tr>
+            </thead>
+            <tbody id="objectRows">
+              <tr><td colspan="4">Connecting to backend...</td></tr>
+            </tbody>
+          </table>
+        </div>
       </article>
     </section>
-    <p class="note"><strong>Prototype note:</strong> this frontend records demo detections. Actual real-time AI detection requires a model such as YOLO and a computer-vision service connected to this API.</p>
+
+    <p class="note">
+      <strong>Prototype note:</strong> This dashboard records demo detections.
+      Real-time AI detection requires a computer-vision model and service.
+    </p>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
+```
